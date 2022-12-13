@@ -1,0 +1,17 @@
+{
+  "name": "calculadora_edad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./calculadora_edad",
+    "dev": "node ./calculadora_edad",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^1.6.0"
+  }
+}
