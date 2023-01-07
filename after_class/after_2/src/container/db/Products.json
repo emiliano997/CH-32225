@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"name": "Notebook Dell 990",
+		"price": 100,
+		"stock": 10,
+		"thumbnail": [
+			"image.com/dell-G620",
+			"image.com/dell-G620_1"
+		]
+	},
+	{
+		"id": 3,
+		"name": "Notebook Dell 990",
+		"price": 100,
+		"stock": 10,
+		"thumbnail": [
+			"image.com/dell-G620",
+			"image.com/dell-G620_1"
+		]
+	},
+	{
+		"id": 4,
+		"name": "Notebook Dell 990",
+		"price": 100,
+		"stock": 10,
+		"thumbnail": [
+			"image.com/dell-G620",
+			"image.com/dell-G620_1"
+		]
+	}
+]
