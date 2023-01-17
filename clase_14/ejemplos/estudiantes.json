@@ -1,0 +1,6 @@
+[
+  { "nombre": "Alberto", "apellido": "Pereyra", "curso": "B2", "correo": "albert@gmail.com"},
+  { "nombre": "Jorge", "apellido": "Zarate", "curso": "B1", "correo": "jorge@gmail.com"},
+  { "nombre": "Matias", "apellido": "Lopez", "curso": "A2", "correo": "mati@gmail.com"},
+  { "nombre": "Esteban", "apellido": "Medina", "curso": "C1", "correo": "esteban@gmail.com"}
+]

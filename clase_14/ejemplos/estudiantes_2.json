@@ -1,0 +1,85 @@
+[
+  {
+    "nombre": "Eduardo",
+    "apellido": "Gonzalez",
+    "curso": "1ro",
+    "edad": 25,
+    "correo": "edu@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Nicolas",
+    "apellido": "Lopez",
+    "curso": "1ro",
+    "edad": 20,
+    "correo": "nico@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Alberto",
+    "apellido": "Perez",
+    "curso": "2ro",
+    "edad": 29,
+    "correo": "albert@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Julieta",
+    "apellido": "Tevez",
+    "curso": "2ro",
+    "edad": 22,
+    "correo": "juli@gmail.com",
+    "sexo": "F"
+  },
+  {
+    "nombre": "Estefania",
+    "apellido": "Pereyra",
+    "curso": "1ro",
+    "edad": 35,
+    "correo": "tefi@gmail.com",
+    "sexo": "F"
+  },
+  {
+    "nombre": "Yessica",
+    "apellido": "Perez",
+    "curso": "3ro",
+    "edad": 27,
+    "correo": "yessi@gmail.com",
+    "sexo": "F"
+  },
+  {
+    "nombre": "Alejandro",
+    "apellido": "Lopez",
+    "curso": "1ro",
+    "edad": 30,
+    "correo": "ale@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Daiana",
+    "apellido": "Ortega",
+    "curso": "2ro",
+    "edad": 29,
+    "correo": "dai@gmail.com",
+    "sexo": "F"
+  },
+  {
+    "nombre": "Marta",
+    "apellido": "Wayne",
+    "curso": "1ro",
+    "edad": 36,
+    "correo": "martu@gmail.com",
+    "sexo": "F"
+  },
+  {
+    "nombre": "Hernan",
+    "apellido": "Tevez",
+    "curso": "2ro",
+    "edad": 31,
+    "correo": "herny@gmail.com",
+    "sexo": "M"
+  },
+  {
+    "nombre": "Arturo"
+  }
+]

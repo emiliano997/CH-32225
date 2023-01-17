@@ -1,0 +1,11 @@
+C > Create
+
+db.collection.insertOne({name: "John", age: 25, city: "New York"})
+db.estudiantes.insertMany([{name: "John", age: 25, city: "New York"}, {name: "Jane", age: 30, city: "Miami"}])
+
+R -> Read
+
+db.collection.find({})
+db.collection.find({name: "John"})
+
+db.collection.countDocuments({name: "John"})

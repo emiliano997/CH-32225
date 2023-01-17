@@ -1,0 +1,39 @@
+> use basetest
+
+> db.estudiantes.insertMany([
+  { "nombre" : "Pablo", "edad" : 25 },
+  { "nombre" : "Juan", "edad" : 22 },
+  { "nombre" : "Lucia", "edad" : 25 },
+  { "nombre" : "Juan", "edad" : 29 },
+  { "nombre" : "Fede", "edad" : 35 }
+])
+
+> db.estudiantes.find().sort({ edad: -1 })
+
+> db.estudiantes.find().sort({ edad: 1 }).limit(1)
+
+> db.estudiantes.find().sort({ edad: 1 }).limit(1).skip(1)
+
+> db.estudiantes.find({ nombre: "Juan" })
+
+> db.estudiantes.find({ nombre: "Juan", edad: 29 })
+
+> db.estudiantes.find({ $or: [{ nombre: "Juan"}, {nombre: "Lucia"}] })
+
+> db.estudiantes.find({ edad: {$gt: 25}  }
+
+> db.estudiantes.find({ edad: {$lte: 25}  })
+
+> db.estudiantes.find({ edad: {$ne: 25}  })
+
+> db.estudiantes.find({ edad: {$gt: 25, $lt: 36}  })
+
+> db.estudiantes.updateOne({ nombre: 'Fede' }, { $set: {edad: 36 }})
+> db.estudiantes.find({ edad: {$gt: 25, $lt: 36}  }) // No deberia aparecer Fede
+
+> db.estudiantes.updateMany({ edad: 25 }, { $set: {edad: 26 }})
+> db.estudiantes.find({ edad: {$gt: 25, $lt: 36}  }) // No deberia aparecer Fede
+
+> db.estudiantes.deleteMany({ nombre: 'Juan' })
+
+> db.estudiantes.deleteMany({})
