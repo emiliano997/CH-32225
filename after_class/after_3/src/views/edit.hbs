@@ -1,0 +1,12 @@
+<div>
+
+  <form class="row g-3">
+    <input class="form-control" type="text" name="title" value="{{ movie.title }}" placeholder="Title" id="title">
+    <input class="form-control" type="number" name="year" value="{{ movie.year }}" placeholder="Year" id="year">
+    <input  class="form-control" type="text" name="director" value="{{ movie.director }}" placeholder="Director" id="director">
+    <input class="form-control" type="hidden" name="id" value="{{ movie.id }}" id="id" >
+    <input class="form-control" type="submit" value="Send" id="send">
+
+  </form>
+</div>
+<script src="/main.js"></script>

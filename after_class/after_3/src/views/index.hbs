@@ -1,0 +1,36 @@
+<div>
+  {{ message }}
+  <form class="row m-3" action="/api/movies" method="POST">
+    <input class="form-control m-2" type="text" name="title" placeholder="Title" id="title">
+    <input class="form-control m-2" type="number" name="year" placeholder="Year" id="year">
+    <input class="form-control m-2" type="text" name="director" placeholder="Director" id="director">
+    <input class="btn btn-primary m-2" type="submit" value="Send" id="send">
+  </form>
+  
+  <hr>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th> _id </th>
+        <th> Title </th>
+        <th> Year </th>
+        <th> Director </th>
+      </tr>
+    </thead> 
+    <tbody>
+      {{#each movies}}
+        <tr>
+          <td>  {{ _id }}</td> 
+          <td> {{ title }} </td>
+          <td> {{ year }} </td>
+          <td> {{ director }} </td>
+          {{!-- Delete edit buttons --}}
+          <td>
+            <a href="/api/delete/{{ _id }}" class="btn btn-danger">Delete </a>
+          </td>
+        </tr>
+      {{/each}}
+
+  </table>
+</div>
