@@ -1,0 +1,43 @@
+<div>
+  <div class="p2">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th> # </th>
+          <th> Title </th>
+          <th> Description </th>
+          <th> Price </th>
+          <th> Stock </th>
+          <th> Actions </th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each products}}
+        <tr>
+          <td> {{this.id}} </td>
+          <td> {{this.title}} </td>
+          <td> {{this.description}} </td>
+          <td> {{this.price}} </td>
+          <td> {{this.stock}} </td>
+          <td>
+            <a href="/edit/{{ this._id }}" class="btn btn-success"> Edit </a>
+            <a href="/delete/{{ this._id}}" class="btn btn-danger"> Delete </a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+
+  <hr>
+
+  <div>
+    <form class="row p-3" action="/api/products" method="POST">
+      <input class="form-control m-1" type="text" name="title" placeholder="Title...">
+      <input class="form-control m-1" type="text" name="description" placeholder="Description...">
+      <input class="form-control m-1" type="number" name="price" placeholder="Price...">
+      <input class="form-control m-1" type="number" name="stock" placeholder="Stock...">
+      <input type="submit" value="Send" class="btn btn-primary">
+    </form>
+  </div>
+</div>

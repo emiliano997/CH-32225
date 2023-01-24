@@ -1,0 +1,35 @@
+<div>
+  <form class="row p-3">
+    <input type="text" id="id" name="id" value="{{ product.id }}">
+    <input
+      class="form-control m-1"
+      type="text"
+      name="title"
+      value="{{ product.title}}"
+      id="title"
+    />
+    <input
+      class="form-control m-1"
+      type="text"
+      name="description"
+      value="{{ product.description }}"
+      id="description"
+    />
+    <input
+      class="form-control m-1"
+      type="number"
+      name="price"
+      value="{{product.price}}"
+      id="price"
+    />
+    <input
+      class="form-control m-1"
+      type="number"
+      name="stock"
+      value="{{product.stock}}"
+      id="stock"
+    />
+    <input type="submit" value="Send" class="btn btn-primary" id="send" />
+  </form>
+</div>
+<script src="/js/main.js"></script>
