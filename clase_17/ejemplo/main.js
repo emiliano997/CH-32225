@@ -4,7 +4,7 @@ import studentModel from "./models/student.js";
 import userModel from "./models/user.js";
 
 const main = async () => {
-  await mongoose.connect('mongodb+srv://test:test@curso-nodejs.de1bv.gcp.mongodb.net/indexacion?retryWrites=true&w=majority')
+  await mongoose.connect()
   mongoose.set('strictQuery', true);
 
   const res = await userModel.find({ first_name: 'Celia' }).explain('executionStats');
@@ -12,7 +12,7 @@ const main = async () => {
 } 
 
 const environment = async () => {
-  await mongoose.connect('mongodb+srv://test:test@curso-nodejs.de1bv.gcp.mongodb.net/indexacion?retryWrites=true&w=majority')
+  await mongoose.connect()
   mongoose.set('strictQuery', true);
 
   // await studentModel.create({
