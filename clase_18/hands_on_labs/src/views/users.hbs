@@ -1,0 +1,17 @@
+<div>
+    <h1>Users</h1>
+    <ul>
+        {{#each users.docs}}
+            <li>{{this.first_name}}</li>
+        {{/each}}
+    </ul>
+
+    <div>
+        <a href="/users?page={{users.prevPage}}">Prev</a>
+        <a href="/users?page={{users.nextPage}}">Next</a>
+    </div>
+
+    <h5>
+      {{ users.page }} / {{ users.totalPages }}
+    </h5>
+</div>
