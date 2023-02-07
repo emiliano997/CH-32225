@@ -1,0 +1,16 @@
+# Estructura
+- src
+  - models
+    - user.model.js
+  - public
+  - routes
+    - session.routes.js
+    - views.routes.js
+  - views
+    - layouts
+      - main.hbs
+    - login.hbs
+    - register.hbs
+    - profile.hbs
+  - dirname.js
+  - server.js

@@ -1,0 +1,32 @@
+{{#if message}}
+  <div class="alert alert-info m-3 alert-dismissible fade show" role="alert">
+    {{message}}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+{{/if}}
+
+<div class="m-2 rounded-4 bg-light p-3">
+  <div class="alert alert-primary">
+    <h1> Bienvenido a nuestro sitio</h1>
+  </div>
+
+  {{#if isSession}}
+
+  <div>
+    <a href="/login" class="btn btn-primary">
+      <i class="bi bi-box-arrow-in-right"></i>
+      Iniciar Sesión
+    </a>
+    <a href="/register" class="btn btn-success">
+
+      <i class="bi bi-pencil-square"></i>
+      Registrese
+    </a>
+  </div>
+  {{/if}}
+</div>
