@@ -1,0 +1,2 @@
+## Diferencia entre hash y cifrado
+La diferencia del Hash en comparación con el cifrado radica en el carácter de irreversibilidad. El cifrado por definición puede descifrarse, de manera que, con la llave privada correcta, podríamos obtener el password original del usuario. Lo cual no es ético, hoy en día casi no se encuentran sitios que te devuelvan tu contraseña si la olvidaste, sino que prefieren aplicar un método de restauración de contraseña.

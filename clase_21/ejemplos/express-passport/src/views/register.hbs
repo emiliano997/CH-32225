@@ -1,0 +1,19 @@
+<div>
+  <h1> Registro </h1>
+  <form action="/session/register" method="post">
+    <input type="text" name="first_name" placeholder="First Name" />
+    <input type="text" name="last_name" placeholder="Last Name" />
+    <input type="email" name="email" placeholder="Email" />
+    <input type="password" name="password" placeholder="Password" />
+    <input type="number" name="age" id="" />
+
+    <select class="form-select" name="role" id="">
+      <option value="user" selected>User</option>
+      <option value="admin">Admin</option>
+
+    </select>
+
+    <button type="submit">Registrarse</button>
+  </form>
+  <a href="/login"> Iniciar Sesion </a>
+</div>
