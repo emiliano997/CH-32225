@@ -1,0 +1,21 @@
+{
+  "name": "github-passport",
+  "version": "1.0.0",
+  "description": "- Paquetes:\r   - express\r   - express-handlebars\r   - express-session\r   - mongoose\r   - passport\r   - passport-github2\r   - https://www.passportjs.org/concepts/authentication/google/ (En caso de usar google)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.9.1",
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12"
+  }
+}

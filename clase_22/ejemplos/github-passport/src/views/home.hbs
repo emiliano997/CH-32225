@@ -1,0 +1,17 @@
+<div>
+  {{#if user}}
+    <h1>Hi {{ user.first_name }}</h1>
+      <ul>
+        {{#if user.age}}
+          <li> {{ user.age }}</li>
+        {{/if}}
+
+        {{#if user.email}} 
+          <li> {{user.email }} </li>
+        {{/if}}
+      </ul> 
+  {{else}}
+    <h1>Hi stranger</h1>
+    <a href="/login"> Login with Github </a>
+  {{/if}}
+</div>
