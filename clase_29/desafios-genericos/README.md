@@ -1,0 +1,11 @@
+# Estructura - Contactos DAO
+- src
+  - dao
+    - memory
+    - mongo
+      - model
+        - Contacts.js
+      - contacts.mongo.js
+  - routes
+    - contacts.routes.js
+  - app.js
