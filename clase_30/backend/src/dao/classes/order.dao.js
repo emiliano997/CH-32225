@@ -1,9 +1,9 @@
-import orderModel from "../models/order.model";
+import orderModel from "../models/order.model.js";
 
 export default class Order {
   getOrders = async () => {
     try {
-      const orders = await orderModel.find();
+      const orders = await orderModel.find().populate('business').populate('user');
       return orders;
     } catch (error) {
       console.log(error);

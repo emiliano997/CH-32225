@@ -12,7 +12,7 @@ const orderSchema = new Schema({
   },
   products: [],
   totalPrice: Number,
-  status: { String, default: "pending" },
+  status: String,
 })
 
 const orderModel = model('order', orderSchema);
