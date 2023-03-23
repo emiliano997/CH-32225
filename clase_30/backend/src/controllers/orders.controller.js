@@ -24,7 +24,8 @@ export const createOrder = async (req, res) => {
   const resultUser = await userServices.getUserById(user);
   const resultBusiness = await businessServices.getBusinessById(business);
 
-  const actualOrders = resultBusiness.products.filter(product => products.includes(product._id))
+  const actualOrders = resultBusiness.products.filter(product => products.includes(product.id))
+  console.log(resultBusiness.products)
   const total = actualOrders.reduce((acc, prev) => {
     acc += prev.price
     return acc
