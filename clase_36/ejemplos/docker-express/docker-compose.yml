@@ -1,0 +1,10 @@
+services:
+  express-server:
+    image: dockerclase
+    ports:
+      - "3000:3000"
+
+  express-docker:
+    image: dockeroperations
+    ports:
+      - "3001:3000"
