@@ -1,0 +1,99 @@
+paths:
+  /api/pets:
+    get:
+      summary: 'Get all pets'
+      tags:
+        - Pets
+      responses:
+        "200":
+          description: "Pets found"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Pet"
+        "500":
+          description: "Internal server error"
+    post:
+      summary: "Create a new pet"
+      tags:
+        - Pets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/createPet'
+      responses:
+        "200":
+          description: "Pet created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pet"
+        "500":
+          description: "Internal server error"
+
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: "Pet id"
+        name:
+          type: string
+          description: "Pet name"
+        specie:
+          type: string
+          description: "Pet specie"
+        birthDate:
+          type: string
+          description: "Pet birth date"
+        adopted:
+          type: boolean
+          description: "Pet adopted"
+        owner:
+          type: ObjectId
+          description: "Pet owner"
+        image:  
+          type: string
+          description: "Pet image"
+      example:
+        _id: 5f9d7b3b9d9b4b2b3c9d9b4b
+        name: "Firulais"
+        specie: "Dog"
+        birthDate: "2019-10-10"
+        adopted: false
+        owner: 5f9d7b3b9d9b4b2b3c9d9b4b
+        image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.purina-latam.com%2Fperros%2Fetapas%2Fadulto%2Fcomo-cuidar-a-un-perro-adulto&psig=AOvV"
+  requestBodies:
+    createPet:
+      properties:
+        name:
+          type: string
+          description: "Pet name"
+        specie:
+          type: string
+          description: "Pet specie"
+        birthDate:
+          type: string
+          description: "Pet birth date"
+        adopted:
+          type: boolean
+          description: "Pet adopted"
+        owner:
+          type: ObjectId
+          description: "Pet owner"
+        image:  
+          type: string
+          description: "Pet image"
+      example:
+        name: "Firulais"
+        specie: "Dog"
+        birthDate: "2019-10-10"
+        adopted: false
+        owner: 5f9d7b3b9d9b4b2b3c9d9b4b
+        image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.purina-latam.com%2Fperros%2Fetapas%2Fadulto%2Fcomo-cuidar-a-un-perro-adulto&psig=AOvV"
