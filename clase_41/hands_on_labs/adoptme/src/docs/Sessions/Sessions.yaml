@@ -1,0 +1,73 @@
+paths:
+  /api/sessions/register:
+    post:
+      summary: "Register a new user"
+      tags:
+        - Sessions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/createUser'
+      responses:
+        "200":
+          description: "User created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "500":
+          description: "Internal server error"
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectiD
+          description: "User id"
+        first_name:
+          type: string
+          description: "User first name"
+        last_name:
+          type: string
+          description: "User last name"
+        email:
+          type: string
+          description: "User email"
+        password:
+          type: string
+          description: "User password"
+      example:
+        _id: 5f9d7b3b9d9b4b2b3c9d9b4b
+        first_name: "John"
+        last_name: "Doe"
+        email: "juan@gmail.com"
+        password: "123456"
+  requestBodies:
+    createUser:
+      type: object
+      properties:
+        _id:
+          type: ObjectiD
+          description: "User id"
+        first_name:
+          type: string
+          description: "User first name"
+        last_name:
+          type: string
+          description: "User last name"
+        email:
+          type: string
+          description: "User email"
+        password:
+          type: string
+          description: "User password"
+      example:
+        _id: 5f9d7b3b9d9b4b2b3c9d9b4b
+        first_name: "John"
+        last_name: "Doe"
+        email: "juan@gmail.com"
+        password: "123456"
