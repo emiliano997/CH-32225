@@ -1,0 +1,117 @@
+paths:
+  /api/users:
+    get:
+      summary: 'Get all users'
+      tags:
+        - Users
+      responses:
+        "200":
+          description: "Users found"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "500":
+          description: "Internal server error"
+  /api/users/{uid}:
+    get:
+      summary: 'Get user by id'
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: uid
+          schema:
+            $type: string
+          required: true
+          description: "User id"
+      responses:
+        "200":
+          description: "User found"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "500":
+          description: "Internal server error"
+    put:
+      summary: "Update user by Id"
+      tags:
+        - Users
+      parameters:
+        - in: path
+          name: uid
+          schema:
+            $type: string
+          required: true
+          description: "User id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/updateUser'
+      responses:
+        "200":
+          description: "User updated"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "500":
+          description: "Internal server error"
+          
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectiD
+          description: "User id"
+        first_name:
+          type: string
+          description: "User first name"
+        last_name:
+          type: string
+          description: "User last name"
+        email:
+          type: string
+          description: "User email"
+        password:
+          type: string
+          description: "User password"
+      example:
+        _id: 5f9d7b3b9d9b4b2b3c9d9b4b
+        first_name: "John"
+        last_name: "Doe"
+        email: "juan@gmail.com"
+        password: "123456"
+  requestBodies:
+    updateUser:
+      type: object
+      properties:
+        _id:
+          type: ObjectiD
+          description: "User id"
+        first_name:
+          type: string
+          description: "User first name"
+        last_name:
+          type: string
+          description: "User last name"
+        email:
+          type: string
+          description: "User email"
+        password:
+          type: string
+          description: "User password"
+      example:
+        _id: 5f9d7b3b9d9b4b2b3c9d9b4b
+        first_name: "John"
+        last_name: "Doe"
+        email: "juan@gmail.com"
+        password: "123456"

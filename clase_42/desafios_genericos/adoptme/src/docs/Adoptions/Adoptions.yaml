@@ -1,0 +1,43 @@
+paths:
+  /api/adoptions/{uid}/{pid}:
+    post:
+      summary: 'Create a new adoption'
+      tags:
+        - Adoptions
+      parameters:
+        - name: uid
+          in: path
+          required: true
+          description: "User id"
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          description: "Pet id"
+          schema:
+            type: string
+      responses:
+        "200":
+          description: "Adoption created"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Adoption"
+        "500":
+          description: "Internal server error"
+
+componets:
+  schemas:
+    Adoption:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: "Adoption id"
+        pet:
+          type: ObjectId
+          description: "Pet id"
+        owner:
+          type: ObjectId
+          description: "User id"
