@@ -1,0 +1,5 @@
+{"level":"error","message":"Cast to ObjectId failed for value \"eweasda\" (type string) at path \"_id\" for model \"products\"","timestamp":"2023-05-18T00:03:28.890Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"eweasda\" (type string) at path \"_id\" for model \"users\"","timestamp":"2023-05-18T00:04:42.153Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"644084b4a8b1d048ce18\" (type string) at path \"_id\" for model \"users\"","timestamp":"2023-05-18T00:18:33.123Z"}
+{"level":"error","message":"All fields are required","timestamp":"2023-05-18T00:23:45.874Z"}
+{"level":"error","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"users\"","timestamp":"2023-05-18T01:04:07.750Z"}

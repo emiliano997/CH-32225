@@ -1,0 +1,104 @@
+paths:
+  /api/users:
+    get:
+      summary: Get all users
+      tag:
+        - User
+      responses:
+        "200":
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "500":
+          description: "Internal Server Error"
+    post:
+      summary: Create user
+      tag:
+        - User
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/createUser"
+      responses:
+        "200":
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "500":
+          description: "Internal Server Error"
+
+  /api/users/{id}:
+    get:
+      summary: Get User By Id
+      tag:
+        - User
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: User id
+      responses:
+        "200":
+          description: "Success"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "404":
+          description: "User not found"
+        "500":
+          description: "Internal Server Error"
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: "User id"
+        username:
+          type: string
+          description: "User name"
+        email:
+          type: string
+          description: "User email"
+        password:
+          type: string
+          description: "User password"
+        role:
+          type: string
+          description: "User role"
+    example:
+      _id: 5f9b3b3b3b3b3b3b3b3b3b3b
+      username: "user"
+      email: "user@gmail.com"
+      password: "123456"
+      role: "user"
+  requestBodies:
+    createUser:
+      type: object
+      properties:
+        username:
+          type: string
+          description: "User name"
+        email:
+          type: string
+          description: "User email"
+        password:
+          type: string
+          description: "User password"
+    example:
+      username: "user"
+      email: "user@gmail.com"
+      password: "123456"

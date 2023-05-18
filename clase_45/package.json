@@ -1,0 +1,39 @@
+{
+  "name": "clase_16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test:user": "mocha ./test/unit/User.test.js",
+    "test:product": "mocha ./test/unit/Products.test.js",
+    "test:int-user": "mocha ./test/integration/User.test.js",
+    "test:int-session": "mocha ./test/integration/Sessions.test.js",
+    "test:int-product": "mocha ./test/integration/Product.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "handlebars": "^4.7.7",
+    "mongoose": "^6.8.4",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}
